@@ -31,6 +31,9 @@ def CheckConvergence(structurename,ionname, granddf):
       c = ax.collections[u].get_paths()[0].vertices
       ax_vert.fill_between(c[:,1], c[:,0], alpha=0.5)
       
+  ax_vert.set_xlabel(ax.get_xlabel())
+  ax_vert.set_ylabel(ax.get_ylabel())
+  
   # Clear the initial axes
   ax.clear()
 

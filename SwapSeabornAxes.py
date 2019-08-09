@@ -49,6 +49,9 @@ def CheckConvergence(structurename,ionname, granddf):
   ax_vert.set_ylim(bottom = -7.0, top = 7.0)
   ax_vert.title.set_text('%s' %(ionname))
 
+  start, end = ax_vert.get_xlim()
+  ax_vert.xaxis.set_ticks(np.arange(start, end, 1.0))
+  
   # Save figure
   plt.tight_layout()
   fig_vert.savefig("%s_%s_US_WHAM_Boot_Convergence_vert.png" %(structurename,ionname), dpi = 800)

@@ -48,7 +48,7 @@ def CheckConvergence(structurename,ionname, granddf):
   ax_vert.set_xlim(left = 0.0, right = 5.5)
   ax_vert.set_ylim(bottom = -7.0, top = 7.0)
   ax_vert.title.set_text('%s' %(ionname))
-
+  #  ax_vert.set_aspect(1.0/ax_vert.get_data_ratio()*1.0)
   start, end = ax_vert.get_xlim()
   ax_vert.xaxis.set_ticks(np.arange(start, end, 1.0))
   
